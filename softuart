@@ -1,0 +1,12 @@
+cd /home/pi/Desktop/0626
+sudo insmod soft_uart.ko
+python3 cansat.py
+______________________________________________________
+git clone https://github.com/adrianomarto/soft_uart
+sudo apt-get install raspberrypi-kernel-headers
+cd /home/pi/Desktop/0626
+make
+sudo make install
+sudo insmod soft_uart.ko
+ls /dev/ttySOFT0
+sudo screen /dev/ttySOFT0 9600
